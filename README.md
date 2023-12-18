@@ -10,4 +10,3 @@ See also
 * [letter-template](https://github.com/cyrraz/letter-template):  Very simple template for a letter in LaTeX.
 * [thesis-template](https://github.com/cyrraz/thesis-template): LaTeX template for a PhD, Master's or Bachelor's thesis.
 * [phd-thesis](https://github.com/cyrraz/phd-thesis):  PhD thesis in Particle Physics written in LaTeX.
-* [cv-template](https://github.com/cyrraz/cv-template): Template for a CV/resume in LaTeX.
