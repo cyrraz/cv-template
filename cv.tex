@@ -1,0 +1,84 @@
+%====================================================================================================
+\documentclass[fontsize=12pt]{article}
+%====================================================================================================
+\thispagestyle{empty}
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\tabcolsep}{2pt}
+%====================================================================================================
+\usepackage[a4paper, total={160mm,280mm}, left=7.5mm, top=10mm]{geometry}
+\usepackage[colorlinks,bookmarks=false,linkcolor=black,urlcolor=black]{hyperref}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{lipsum}
+%====================================================================================================
+% Insert an empty line with a negative vertical space, reducing the spacing typically added by \\.
+% /!\ Tune this number so that your content fits the page length
+\newcommand{\emptyLine}{\\[-0.2cm]}
+% Define a bullet point with horizontal space on both sides
+\newcommand{\bulletpoint}{\hspace*{\labelsep}\textbullet\hspace*{\labelsep}}
+% Create a simple entry spanning 2 columns, left-aligned
+\newcommand{\simpleEntry}[1]{\multicolumn{2}{l}{#1}}
+% Create a section title, enlarged text spanning 2 columns
+\newcommand{\sectionTitle}[1]{\emptyLine\emptyLine\simpleEntry{\Large{#1}}}
+% Create a title entry, bold text spanning 2 columns
+\newcommand{\titleEntry}[1]{\emptyLine\simpleEntry{\textbf{#1}}}
+% Create an indented entry spanning 2 columns
+\newcommand{\indentedEntry}[1]{\simpleEntry{\hspace{0.2cm}{#1}}}
+% Create an entry with a bullet point, indented, spanning 2 columns
+\newcommand{\bulletpointEntry}[1]{\indentedEntry{\bulletpoint{#1}}}
+% Create a multicolumn entry spanning 3 columns in a table, preceded by an empty line.
+\newcommand{\profileEntry}[1]{\emptyLine\multicolumn{3}{p{\textwidth}}{#1}}
+%====================================================================================================
+\begin{document}
+\begin{tabular}{p{5cm}lr}
+%====================================================================================================
+\simpleEntry{\Large{\textbf{John SMITH}}} & \multirow[c]{3}{*}{\fbox{\includegraphics[height=3cm]{picture}}} \\
+\simpleEntry{\large{\emph{Profession title}}} \\
+\emptyLine
+Street & Age (Birth date) \\
+ZIP City & Nationality \\
+Country \\
+012 345 678 \\
+john.smith@email.com \\
+%====================================================================================================
+\sectionTitle{Profile} \\ \hline
+ \profileEntry{
+ \lipsum[1][1-4]
+ } \\
+%====================================================================================================
+\sectionTitle{Education} \\ \hline
+ \titleEntry{U2, University 2, City, Country} \\
+  \indentedEntry{Name of the diploma} & $20xx-20xx$ \\
+ \titleEntry{U1, University 1, City, Country} \\
+  \indentedEntry{Name of the diploma} & $20xx-20xx$ \\
+  \indentedEntry{Name of the diploma} & $20xx-20xx$ \\
+%====================================================================================================
+\sectionTitle{Work experience} \\ \hline 
+ \titleEntry{C2, Company 2, City, Country} \\
+  \indentedEntry{Name of the position} & $20xx-20xx$ \\
+   \bulletpointEntry{\lipsum[1][1]} \\
+   \bulletpointEntry{\lipsum[1][1]} \\
+  \indentedEntry{Name of the position} & $20xx-20xx$ \\
+   \bulletpointEntry{\lipsum[1][1]} \\
+ \titleEntry{C1, Company 1, City, Country} \\
+  \indentedEntry{Name of the position} & $20xx-20xx$ \\
+   \bulletpointEntry{\lipsum[1][1]} \\
+%====================================================================================================
+\sectionTitle{Computer skills} \\ \hline 
+ \emptyLine
+ {\textbf{Skill 1}} & \lipsum[1][1] \\
+ {\textbf{Skill 2}} & \lipsum[1][1] \\
+ {\textbf{Skill 3}} & \lipsum[1][1] \\
+%====================================================================================================
+\sectionTitle{Languages} \\ \hline
+ \emptyLine
+ {\textbf{Language 1}} & Level \\
+ {\textbf{Language 2}} & Level \\
+%====================================================================================================
+\sectionTitle{Interests} \\ \hline 
+ \titleEntry{Activity} \\
+  \bulletpointEntry{\lipsum[1][1]} & $20xx-20xx$ \\
+%====================================================================================================
+\end{tabular}
+\end{document}
+%====================================================================================================
