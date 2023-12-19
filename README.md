@@ -1,5 +1,8 @@
 # cv-template
-Template for a CV/resume in LaTeX.
+Template for a CV/resume in LaTeX, designed with simplicity and clarity in mind.
+
+The template uses a tabular format for easy readability and includes commands for entries like sections and bullet points.
+The simple structure of the template enhances its compatibility with recruitment algorithms, ensuring easy parsing and effective evaluation.
 
 The pdf of the thesis can be produced by running `make`.
 For the creation of the pdf file, you need a distribution of TeX, such as [TeX Live](https://www.tug.org/texlive/quickinstall.html).
