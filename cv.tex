@@ -5,7 +5,7 @@
 \renewcommand{\baselinestretch}{1.2}
 \setlength{\tabcolsep}{2pt}
 %====================================================================================================
-\usepackage[a4paper, top=10mm, left=7.5mm]{geometry}
+\usepackage[a4paper, hmargin=1cm, vmargin=1cm, centering]{geometry}
 \usepackage[colorlinks,bookmarks=false,linkcolor=black,urlcolor=black]{hyperref}
 \usepackage{multirow}
 \usepackage{graphicx}
@@ -30,6 +30,7 @@
 \newcommand{\profileEntry}[1]{\emptyLine\multicolumn{3}{p{\textwidth}}{#1}}
 %====================================================================================================
 \begin{document}
+\centering
 \begin{tabular}{p{5cm}lr}
 %====================================================================================================
 \simpleEntry{\Large{\textbf{John SMITH}}} & \multirow[c]{3}{*}{\fbox{\includegraphics[height=3cm]{picture}}} \\
